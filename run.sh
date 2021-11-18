@@ -1,0 +1,9 @@
+python run.py --cfg=64x64.cfg
+python run.py --cfg=16x16.cfg
+python run.py --cfg=8x8.cfg
+python run.py --cfg=32x16.cfg
+python run.py --cfg=32x8.cfg
+python run.py --cfg=16x8.cfg
+python run.py --cfg=32x4.cfg
+python run.py --cfg=16x4.cfg
+python run.py --cfg=8x4.cfg
