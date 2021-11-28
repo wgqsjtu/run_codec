@@ -4,6 +4,7 @@ from config import read_cfg
 from command import get_cmd_set
 from processor import multi_processor, single_processor
 from log import get_result
+from shutil import copyfile
 import argparse
 
 parser = argparse.ArgumentParser(description='PyTorch Super Res Example')
@@ -55,6 +56,8 @@ if 'dec_path' in cfg.keys():
     #finish decodeing
     end_time = time.time()
     print('==> Finish decoding. || Run time: {:.2f} sec.'.format(end_time - start_time))
+
+copyfile(opt.cfg, cfg['output_path'] + '/' + opt.cfg)
 
 if cfg['log'] > 0:
     result = open(cfg['output_path'] + '/result.csv', 'w')
